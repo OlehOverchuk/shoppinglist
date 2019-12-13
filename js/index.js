@@ -2,12 +2,12 @@ const clock = document.querySelector('.clock');
 const updateTime = () => clock.innerHTML = new Date().toLocaleTimeString();
 setInterval(updateTime, 1000);
 
-const list = document.querySelector('ul');
+      const list = document.querySelector('ul');
       const input = document.querySelector('input');
       const button = document.querySelector('button');
 
       button.onclick = function() {
-        let myItem = input.value;
+        let Item = input.value;
         input.value = '';
 
         const listItem = document.createElement('li');
@@ -15,9 +15,9 @@ const list = document.querySelector('ul');
         const listBtn = document.createElement('button');
 
         listItem.appendChild(listText);
-        listText.textContent = myItem;
+        listText.textContent = Item;
         listItem.appendChild(listBtn);
-        listBtn.textContent = 'Delete';
+        listBtn.textContent = 'Nope';
         list.appendChild(listItem);
 
         listBtn.onclick = function(e) {
